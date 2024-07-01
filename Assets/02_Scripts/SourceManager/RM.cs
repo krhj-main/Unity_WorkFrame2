@@ -10,9 +10,9 @@ public class RM : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        prefab = Resources.Load<GameObject>("prefabs/Cube");
+        //prefab = ResourcesManager.Instance.Instantiate("Cube");
 
-        cube = Instantiate(prefab);
+        cube = ResourcesManager.Instance.Instantiate("Cube",GameObject.Find("RM").transform);
 
         Destroy(cube,3f);
     }
