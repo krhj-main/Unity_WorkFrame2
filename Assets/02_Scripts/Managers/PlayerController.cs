@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     Vector3 _destPos;
     float wait_run_ratio;
 
+
     //InputManager _input = new InputManager();
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,8 @@ public class PlayerController : MonoBehaviour
         UnityManagers.Input.KeyAction += OnKeyBoard;
         UnityManagers.Input.MouseAction -= OnMouseClicked;
         UnityManagers.Input.MouseAction += OnMouseClicked;
+
+        //ResourcesManager.Instance.Instantiate("UI_Button");
     }
 
     public enum PlayerState
