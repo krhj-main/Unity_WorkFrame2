@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     Vector3 _destPos;
     float wait_run_ratio;
 
+    UI_Button uiPopup;
+
 
     //InputManager _input = new InputManager();
     // Start is called before the first frame update
@@ -22,6 +24,18 @@ public class PlayerController : MonoBehaviour
         UnityManagers.Input.MouseAction += OnMouseClicked;
 
         //ResourcesManager.Instance.Instantiate("UI_Button");
+
+
+        uiPopup = UI_Managers.Instance.ShowPopupUI<UI_Button>("UI_Button");
+        uiPopup = UI_Managers.Instance.ShowPopupUI<UI_Button>("UI_Button");
+        uiPopup = UI_Managers.Instance.ShowPopupUI<UI_Button>("UI_Button");
+        uiPopup = UI_Managers.Instance.ShowPopupUI<UI_Button>("UI_Button");
+        uiPopup = UI_Managers.Instance.ShowPopupUI<UI_Button>("UI_Button");
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UI_Managers.Instance.ClosePopupUI(uiPopup);
+        }        
     }
 
     public enum PlayerState
@@ -144,4 +158,6 @@ public class PlayerController : MonoBehaviour
             _moveToDest = true;
         }
     }
+
+    
 }

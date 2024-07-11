@@ -12,7 +12,7 @@ public class RM : MonoBehaviour
     {
         //prefab = ResourcesManager.Instance.Instantiate("Cube");
 
-        cube = ResourcesManager.Instance.Instantiate("Cube",GameObject.Find("RM").transform);
+        cube = ResourcesManager.Instance.Instantiate($"Cube",GameObject.Find("RM").transform);
 
         Destroy(cube,3f);
     }

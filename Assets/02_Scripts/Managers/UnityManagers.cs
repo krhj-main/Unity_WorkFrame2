@@ -5,7 +5,7 @@ using UnityEngine;
 public class UnityManagers : MonoBehaviour
 {
     static UnityManagers instance;
-    static UnityManagers Instance
+    public static UnityManagers Instance
     {
         get { return instance; }
     }

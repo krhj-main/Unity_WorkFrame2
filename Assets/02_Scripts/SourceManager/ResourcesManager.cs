@@ -24,7 +24,7 @@ public class ResourcesManager : Singleton<ResourcesManager>
 
     
     // ·¦ÇÎ
-    public void Destory(GameObject go)
+    public void Destroy(GameObject go)
     {
         if (go == null)
         {
